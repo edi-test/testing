@@ -1,0 +1,51 @@
+version: '3.7'
+
+# In case we want to keep the data
+#volumes: 
+  #mysql: 
+
+networks:
+  lemp-mreza:
+    driver: overlay
+
+services:
+    php:
+        image: 'php-fpm7.2-mysqli-redis:1.0.0'
+        volumes:
+            - './app:/var/www/html'
+        networks:
+        - lemp-mreza
+
+    nginx:
+        image: 'nginx:1.13.6'
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - './app:/var/www/html'
+            - './config/nginx:/etc/nginx/conf.d'
+        networks:
+        - lemp-mreza
+
+
+    mariadb:
+        image: 'mariadb:10.3.9'
+        #container_name: ${APP_NAME:?err}-mariadb
+        #restart: 'on-failure'
+        environment:
+           MYSQL_ROOT_USER: root    
+           MYSQL_ROOT_PASSWORD: root
+           MYSQL_DATABASE: testna_baza
+        volumes:
+                # In case we want to keep the data
+                #- mysql:/var/lib/mysql/ 
+            - ./app/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+            - ./app/mysql_set.php:/docker-entrypoint-initdb.d/mysql_set.php 
+        networks:
+        - lemp-mreza
+
+            
+    redis:
+        image: redis:5.0.3-alpine
+        networks:
+             - lemp-mreza
