@@ -47,7 +47,7 @@ $ docker build -t php-fpm7.2.mysqli-redis:1.0.0 .
 ```
 $ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
 ```
-**8. Run a Docker swarm:
+**8. Run a Docker swarm:**
 ```
 $ docker swarm init
 ```
