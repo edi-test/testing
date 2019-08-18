@@ -43,13 +43,13 @@ $ git clone https://github.com/edi-test/testing.git
 ```
 $ docker build -t php-fpm7.2.mysqli-redis:1.0.0 .
 ```
-**7. Run docker deploy:**
-```
-$ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
-```
-**8. Run a Docker swarm:**
+**7. Run a Docker swarm:**
 ```
 $ docker swarm init
+```
+**8. Run docker deploy:**
+```
+$ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
 ```
 **9. Test scripts by using curl or opening them in your browser:**
 ```
