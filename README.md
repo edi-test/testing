@@ -4,7 +4,7 @@
 ```
 **1. Access your local machine (Linux environment) 
 ```
-**2. Install Docker from https://docs.docker.com/install/linux/docker-ce/ubuntu/: 
+**2. Install Docker from https://docs.docker.com/install/linux/docker-ce/ubuntu/:** 
 ```
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
 $ sudo apt-get update
@@ -30,19 +30,19 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 $ sudo usermod -aG docker $USER
 ```
-**3. Change the current working directory to the location where you want the cloned directory to be made.
+**3. Change the current working directory to the location where you want the cloned directory to be made.**
 ```
-**4. type git clone, and ten paste the URL: 
+**4. type git clone, and ten paste the URL:** 
 ```
 $ git clone https://github.com/edi-test/testing.git
 ```
-**5. Press Enter. Your local clone will be created.
+**5. Press Enter. Your local clone will be created.**
 ```
-**6. Run docker deploy:
+**6. Run docker deploy:**
 ```
 $ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
 ```
-**7. Test scripts by using curl or opening them in your browser: 
+**7. Test scripts by using curl or opening them in your browser:**
 ```
 $ curl localhost/phpinfo.php
 ```
