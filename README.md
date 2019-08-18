@@ -1,8 +1,8 @@
 **Instructions**:
-
+```
 (I am using Ubuntu Linux)
 ```
-**1. Access your local machine (Linux environment) 
+**1. Access your local machine (Linux environment)**
 ```
 **2. Install Docker from https://docs.docker.com/install/linux/docker-ce/ubuntu/:** 
 ```
