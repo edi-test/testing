@@ -45,13 +45,13 @@ $ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-aut
 **7. Test scripts by using curl or opening them in your browser:**
 ```
 $ curl localhost/phpinfo.php
-```
+
 $ curl localhost/redis_set.php
-```
+
 $ curl localhost/redis_get.php
-```
+
 $ curl localhost/mysql_set.php
-```
+
 $ curl localhost/mysql_get.php
 ```
 
