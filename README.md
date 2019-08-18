@@ -37,7 +37,7 @@ $ sudo usermod -aG docker $USER
 ```
 $ git clone https://github.com/edi-test/testing.git
 ```
-**5. Press Enter. Your local clone will be created.**
+**5. Press Enter and access "Testing" directory. Your local clone will be created.**
 
 **6. Run PHP7.2 image with redis extension (everything is already set up in Dockerfile)**
 ```
