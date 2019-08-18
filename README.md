@@ -1,10 +1,11 @@
-Instructions:
+** **Instructions:
 
 (I am using Ubuntu Linux)
-
-1. Access your local machine (Linux environment) 
-2. Install Docker from https://docs.docker.com/install/linux/docker-ce/ubuntu/: 
-
+```
+**1. Access your local machine (Linux environment) 
+```
+**2. Install Docker from https://docs.docker.com/install/linux/docker-ce/ubuntu/: 
+```
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -26,31 +27,41 @@ $ sudo add-apt-repository \
    stable"
 $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
-
+```
 $ sudo usermod -aG docker $USER
-
-3. Change the current working directory to the location where you want the cloned directory to be made.
-
-4. type git clone, and ten paste the URL: 
-
+```
+**3. Change the current working directory to the location where you want the cloned directory to be made.
+```
+**4. type git clone, and ten paste the URL: 
+```
 $ git clone https://github.com/edi-test/testing.git
-
-5. Press Enter. Your local clone will be created.
-
-6. Run docker deploy:
-
+```
+**5. Press Enter. Your local clone will be created.
+```
+**6. Run docker deploy:
+```
 $ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
-
-7. Test scripts by using curl or opening them in your browser: 
-
+```
+**7. Test scripts by using curl or opening them in your browser: 
+```
 $ curl localhost/phpinfo.php
+```
 $ curl localhost/redis_set.php
+```
 $ curl localhost/redis_get.php
+```
 $ curl localhost/mysql_set.php
+```
 $ curl localhost/mysql_get.php
+```
 
 http://someIP/phpinfo.php
+```
 http://someIP/redis_set.php
+```
 http://someIP/redis_get.php
+```
 http://someIP/mysql_set.php
+```
 http://someIP/mysql_get.php
+```
