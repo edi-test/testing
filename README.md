@@ -1,4 +1,4 @@
-** **Instructions:
+**Instructions**:
 
 (I am using Ubuntu Linux)
 ```
