@@ -66,3 +66,7 @@ http://someIP/mysql_set.php
 
 http://someIP/mysql_get.php
 
+**8. Access PHPmyAdmin by typing this into your browser:**
+```
+http://someIP:8080/index.php
+```
