@@ -33,17 +33,25 @@ $ sudo usermod -aG docker $USER
 ```
 **3. Change the current working directory to the location where you want the cloned directory to be made.**
 
-**4. type git clone, and then paste the URL:** 
+**4. Type git clone, and then paste the URL:** 
 ```
 $ git clone https://github.com/edi-test/testing.git
 ```
 **5. Press Enter. Your local clone will be created.**
 
-**6. Run docker deploy:**
+**6. Run PHP7.2 image with redis extension (everything is already set up in Dockerfile)**
+```
+$ docker build -t php-fpm7.2.mysqli-redis:1.0.0 .
+```
+**7. Run docker deploy:**
 ```
 $ docker stack deploy -c edi-lemp-stack.yml edi-docker-stack --with-registry-auth
 ```
-**7. Test scripts by using curl or opening them in your browser:**
+**8. Run a Docker swarm:
+```
+$ docker swarm init
+```
+**9. Test scripts by using curl or opening them in your browser:**
 ```
 $ curl localhost/phpinfo.php
 
@@ -66,7 +74,7 @@ http://someIP/mysql_set.php
 
 http://someIP/mysql_get.php
 
-**8. Access PHPmyAdmin by typing this into your browser:**
+**10. Access PHPmyAdmin by typing this into your browser:**
 ```
 http://someIP:8080/index.php
 ```
