@@ -43,7 +43,17 @@ services:
             - ./app/mysql_set.php:/docker-entrypoint-initdb.d/mysql_set.php 
         networks:
         - lemp-mreza
-
+    
+    phpmyadmin:
+        image: 'phpmyadmin/phpmyadmin:4.9'
+        ports:
+           - '8080:80'
+        networks:
+           - lemp-mreza
+        environment:
+           PMA_HOST: mariadb
+           PMA_USER: root
+           PMA_PASSWORD: root
             
     redis:
         image: redis:5.0.3-alpine
