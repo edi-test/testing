@@ -33,7 +33,7 @@ $ sudo usermod -aG docker $USER
 ```
 **3. Change the current working directory to the location where you want the cloned directory to be made.**
 
-**4. type git clone, and ten paste the URL:** 
+**4. type git clone, and then paste the URL:** 
 ```
 $ git clone https://github.com/edi-test/testing.git
 ```
