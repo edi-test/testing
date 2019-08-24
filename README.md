@@ -41,7 +41,7 @@ $ git clone https://github.com/edi-test/testing.git
 
 **6. Run PHP7.2 image with redis extension (everything is already set up in Dockerfile)**
 ```
-$ docker build -t php-fpm7.2.mysqli-redis:1.0.0 .
+$ docker build -t php-fpm7.2-mysqli-redis:1.0.0 .
 ```
 **7. Run a Docker swarm:**
 ```
